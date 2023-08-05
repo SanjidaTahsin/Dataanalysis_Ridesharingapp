@@ -1,11 +1,17 @@
+# Reading the CSV file to conduct analysis in R naming it as Dataset_1.
+
 Dataset_1<- read.csv("D:\\Projects\\Dataset\\Sample Dataset of a ride sharing app (Data).csv", header=TRUE)
 View(Dataset_1)
+
+#Convering the integers into characters for visualization.
 
 Dataset_1$rating <- as.character(Dataset_1$rating)
 Dataset_1$payment_type <- as.character(Dataset_1$payment_type)
 Dataset_1$canceled_by <- as.character(Dataset_1$canceled_by)
 Dataset_1$rider_id <- as.character(Dataset_1$rider_id)
 Dataset_1$driver_id <- as.character(Dataset_1$driver_id)
+
+#Counting the non empty cells from Dataset_1
 
 colSums(Dataset_1 != 0)
 #      hashed_id                rider_id               driver_id                    fare 
@@ -18,5 +24,7 @@ colSums(Dataset_1 != 0)
 #NA                      24                      NA                      NA 
 #payment_type 
 #5085 
+
+#using freq command to summarize the data.
 
 freq(Dataset_1)
