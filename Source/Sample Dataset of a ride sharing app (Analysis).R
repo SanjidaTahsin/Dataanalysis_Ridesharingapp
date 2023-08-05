@@ -3,7 +3,7 @@
 Dataset_1<- read.csv("D:\\Projects\\Dataset\\Sample Dataset of a ride sharing app (Data).csv", header=TRUE)
 View(Dataset_1)
 
-#Convering the integers into characters for visualization.
+#Converting the integers into characters for visualization.
 
 Dataset_1$rating <- as.character(Dataset_1$rating)
 Dataset_1$payment_type <- as.character(Dataset_1$payment_type)
